@@ -1,14 +1,14 @@
 Sub a_myCodeBox()
 '
-' ºê1 ºê
+' å®1 å®
 '
 '
     ActiveDocument.Tables.Add Range:=Selection.Range, NumRows:=1, NumColumns:= _
         2, DefaultTableBehavior:=wdWord9TableBehavior, AutoFitBehavior:= _
         wdAutoFitFixed
     With Selection.Tables(1)
-        If .Style <> "Íø¸ñĞÍ" Then
-            .Style = "Íø¸ñĞÍ"
+        If .Style <> "ç½‘æ ¼å‹" Then
+            .Style = "ç½‘æ ¼å‹"
         End If
         .ApplyStyleHeadingRows = True
         .ApplyStyleLastRow = False
@@ -17,15 +17,15 @@ Sub a_myCodeBox()
         .ApplyStyleRowBands = True
         .ApplyStyleColumnBands = False
     End With
-    Application.Run MacroName:="ÉèÖÃ´úÂë±í¸ñ"
-    Application.Run MacroName:="ÊäÈëÁ¬ĞøÊı×Ö"
+    Application.Run MacroName:="è®¾ç½®ä»£ç è¡¨æ ¼"
+    Application.Run MacroName:="è¾“å…¥è¿ç»­æ•°å­—"
 End Sub
-Sub ÉèÖÃ´úÂë±í¸ñ()
+Sub è®¾ç½®ä»£ç è¡¨æ ¼()
 ' author: code4101
-' ÉèÖÃ´úÂë±í¸ñ ºê
+' è®¾ç½®ä»£ç è¡¨æ ¼ å®
 '
 '
-    ' ±³¾°É«ÎªmorningµÄÅäÉ«·½°¸£¬RGBÎª(229,229,229)
+    ' èƒŒæ™¯è‰²ä¸ºmorningçš„é…è‰²æ–¹æ¡ˆï¼ŒRGBä¸º(229,229,229)
     With Selection.Tables(1)
         With .Shading
             .Texture = wdTextureNone
@@ -40,14 +40,14 @@ Sub ÉèÖÃ´úÂë±í¸ñ()
         .Borders(wdBorderDiagonalDown).LineStyle = wdLineStyleNone
         .Borders(wdBorderDiagonalUp).LineStyle = wdLineStyleNone
         .Borders.Shadow = False
-        .AutoFitBehavior (wdAutoFitContent)  '×Ô¶¯µ÷Õû´óĞ¡
+        .AutoFitBehavior (wdAutoFitContent)  'è‡ªåŠ¨è°ƒæ•´å¤§å°
     End With
     With Options
         .DefaultBorderLineStyle = wdLineStyleSingle
         .DefaultBorderLineWidth = wdLineWidth050pt
         .DefaultBorderColor = wdColorAutomatic
     End With
-    ' ¶ÎÂäÎŞÊ×ĞĞËõ½ø£¬ĞĞ¼ä¾àÎª¹Ì¶¨Öµ12°õ
+    ' æ®µè½æ— é¦–è¡Œç¼©è¿›ï¼Œè¡Œé—´è·ä¸ºå›ºå®šå€¼12ç£…
     With Selection.ParagraphFormat
         .LeftIndent = CentimetersToPoints(0)
         .RightIndent = CentimetersToPoints(0)
@@ -81,15 +81,15 @@ Sub ÉèÖÃ´úÂë±í¸ñ()
         .AddSpaceBetweenFarEastAndDigit = True
         .BaseLineAlignment = wdBaselineAlignAuto
     End With
-    ' Çå³ıÔ­ÓĞµÄ¶ÎÂäµ×ÎÆ
+    ' æ¸…é™¤åŸæœ‰çš„æ®µè½åº•çº¹
     Selection.ParagraphFormat.Shading.BackgroundPatternColor = wdColorAutomatic
 End Sub
-Sub ÊäÈëÁ¬ĞøÊı×Ö()
+Sub è¾“å…¥è¿ç»­æ•°å­—()
 ' author: code4101
-    ĞĞÊı = InputBox("ÇëÊäÈë´úÂëÖÕÖ¹ĞĞÊı", "ÊäÈëĞĞÊı", "50")
-    For i = 1 To ĞĞÊı - 1
+    è¡Œæ•° = InputBox("è¯·è¾“å…¥ä»£ç ç»ˆæ­¢è¡Œæ•°", "è¾“å…¥è¡Œæ•°", "50")
+    For i = 1 To è¡Œæ•° - 1
         Selection.TypeText Text:=i
         Selection.TypeParagraph
     Next
-    Selection.TypeText Text:=ĞĞÊı
+    Selection.TypeText Text:=è¡Œæ•°
 End Sub
