@@ -1,0 +1,8 @@
+BackgroundColour=39,40,34
+Font=Consolas
+FontHeight=14
+Columns=110
+Rows=50
+AllowBlinking=yes
+Locale=C
+Charset=GBK

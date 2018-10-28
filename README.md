@@ -12,3 +12,11 @@
 
 可以在下面的链接中找到源下载地址。
 [Source](http://tieba.baidu.com/p/4765378051)
+
+## minttyrc
+
+Cygwin的配置文件。使用的时候千万不要设置Java的字符环境变量。PICK之后就彻底乱了！
+
+## vimrc
+
+这是一个很复杂的vim配置文件，不建议使用vim做开发。
