@@ -21,5 +21,3 @@ set smartindent
 
 " 永久状态栏
 set laststatus=2
-
-
